@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
 import { Navbar } from "@/components/Navbar"
 import { Home } from "@/pages/Home"
 import { About } from "@/pages/About"
@@ -11,6 +11,21 @@ import { useEffect } from "react"
 import { Footer } from "@/components/Footer"
 import { baseUrl } from "@/config"
 
+// ScrollToTop component
+export function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant"
+    })
+  }, [pathname])
+
+  return null
+}
+
 function App() {
   useEffect(() => {
     // Force dark mode
@@ -19,6 +34,7 @@ function App() {
 
   return (
     <Router basename={baseUrl}>
+      <ScrollToTop />
       <div className="min-h-screen bg-background flex flex-col">
         <Navbar />
         <main className="pt-16 flex-grow">

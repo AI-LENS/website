@@ -1,4 +1,4 @@
-import emblem1 from "@/assets/emblem1.png"
+import emblem1 from "@/assets/emblem2.png"
 import aboutimg from "@/assets/abouttimg.jpg"
 import { Card, CardContent } from "@/components/ui/card"
 

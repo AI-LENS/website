@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom"
 import { cn } from "@/lib/utils"
-import logo1 from "@/assets/logo1.png"
+import logo1 from "@/assets/logo2.png"
 
 export function Navbar() {
   const location = useLocation()

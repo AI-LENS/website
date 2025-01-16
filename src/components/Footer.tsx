@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Card, CardContent } from "@/components/ui/card"
 import logo1 from "@/assets/logo1.png"
-import favicon from "@/assets/favicon.png"
-import emblem1 from "@/assets/emblem1.png"
 
 export function Footer() {
   return (
@@ -26,11 +24,6 @@ export function Footer() {
                     src={logo1} 
                     alt="AILENS Logo" 
                     className="h-12 w-auto"
-                  />
-                  <img 
-                    src={emblem1} 
-                    alt="AILENS Emblem" 
-                    className="h-10 w-auto"
                   />
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">
