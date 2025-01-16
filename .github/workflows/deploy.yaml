@@ -22,7 +22,9 @@ jobs:
         run: rm -rf node_modules package-lock.json && npm install
 
       - name: Build 🏗️
-        run: npm run build
+        run: |
+          export NODE_ENV=production
+          npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
