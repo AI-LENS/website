@@ -9,14 +9,13 @@ import { Careers } from "@/pages/Careers"
 import { Contact } from "@/pages/Contact"
 import { useEffect } from "react"
 import { Footer } from "@/components/Footer"
+import { baseUrl } from "@/config"
 
 function App() {
   useEffect(() => {
     // Force dark mode
     document.documentElement.classList.add('dark')
   }, [])
-
-  const baseUrl = process.env.NODE_ENV === 'production' ? 'ai-lens.github.io/website' : '/';
 
   return (
     <Router basename={baseUrl}>
