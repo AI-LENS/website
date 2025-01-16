@@ -12,5 +12,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: isProduction ? '/ai-lens.github.io/website/' : '/'
-})
+  base: isProduction ? "https://ai-lens.github.io/website/" : "/",
+});
