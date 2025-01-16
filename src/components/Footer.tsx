@@ -10,12 +10,15 @@ import emblem1 from "@/assets/emblem1.png"
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-background/95 to-background border-t border-border mt-auto font-[-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial,sans-serif]">
+    <footer className="bg-gradient-to-b from-zinc-900/90 to-zinc-950/90 mt-auto relative
+      before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-b 
+      before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all
+      font-[-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial,sans-serif]">
       <div className="container mx-auto px-4 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo and Description */}
-          <Card className="border-none shadow-none">
+          <Card className="bg-transparent border-none shadow-none">
             <CardContent className="p-0">
               <div className="mb-4 space-y-4">
                 <div className="flex items-center gap-4">
@@ -39,7 +42,7 @@ export function Footer() {
           </Card>
 
           {/* Our Offerings */}
-          <Card className="border-none shadow-none">
+          <Card className="bg-transparent border-none shadow-none hover:bg-zinc-800/20 transition-colors duration-300">
             <CardContent className="p-0">
               <h3 className="text-lg font-semibold text-foreground mb-4">Our Offerings</h3>
               <ul className="text-muted-foreground text-sm space-y-2">
@@ -64,7 +67,7 @@ export function Footer() {
           </Card>
 
           {/* Contact Info */}
-          <Card className="border-none shadow-none">
+          <Card className="bg-transparent border-none shadow-none hover:bg-zinc-800/20 transition-colors duration-300">
             <CardContent className="p-0">
               <h3 className="text-lg font-semibold text-foreground mb-4">Contact Info</h3>
               <div className="text-muted-foreground text-sm space-y-4">
@@ -85,16 +88,16 @@ export function Footer() {
           </Card>
 
           {/* Newsletter */}
-          <Card className="border-none shadow-none">
+          <Card className="bg-transparent border-none shadow-none">
             <CardContent className="p-0">
-              <h3 className="text-lg font-semibold text-foreground mb-4">Newsletter</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">Newsletter</h3>
               <div className="flex flex-col gap-3">
                 <Input
                   type="email"
                   placeholder="Enter Email Address"
-                  className="bg-background"
+                  className="bg-zinc-800/50 border-blue-500/20 focus:border-blue-400/40 transition-colors"
                 />
-                <Button className="w-full">
+                <Button className="w-full bg-blue-500/80 hover:bg-blue-400 transition-colors">
                   Subscribe
                 </Button>
               </div>
@@ -102,7 +105,7 @@ export function Footer() {
           </Card>
         </div>
 
-        <Separator className="my-8" />
+        {/* <Separator className="my-8 bg-blue-500/20" /> */}
 
         {/* Social Links */}
         <div className="flex justify-center space-x-6 mb-8">
@@ -110,7 +113,7 @@ export function Footer() {
             variant="ghost"
             size="icon"
             asChild
-            className="hover:text-primary hover:bg-primary/10"
+            className="hover:text-blue-400 hover:bg-blue-500/10 transition-colors"
           >
             <a
               href="https://github.com/ailens-ai"
@@ -124,7 +127,7 @@ export function Footer() {
             variant="ghost"
             size="icon"
             asChild
-            className="hover:text-primary hover:bg-primary/10"
+            className="hover:text-blue-400 hover:bg-blue-500/10 transition-colors"
           >
             <a
               href="https://linkedin.com/company/ailens-ai"
@@ -136,19 +139,19 @@ export function Footer() {
           </Button>
         </div>
 
-        <Separator />
+        <Separator className="bg-blue-500/20" />
 
         {/* Bottom Footer */}
         <div className="pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">
+            <p className="text-slate-300 text-sm">
               © Copyright ©2024 AILENS. All Rights Reserved
             </p>
-            <div className="flex gap-4 text-sm text-muted-foreground">
-              <Button variant="link" asChild>
+            <div className="flex gap-4 text-sm text-slate-300">
+              <Button variant="link" asChild className="text-slate-300 hover:text-blue-400">
                 <Link to="/terms">Terms and conditions</Link>
               </Button>
-              <Button variant="link" asChild>
+              <Button variant="link" asChild className="text-slate-300 hover:text-blue-400">
                 <Link to="/privacy">Privacy policy</Link>
               </Button>
             </div>

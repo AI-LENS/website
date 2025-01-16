@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import heroImage from "@/assets/hero.jpeg"
 import { cn } from "@/lib/utils"
 import { BadgeCheck, Brain, Code2, Cpu, Lock, Share2 } from "lucide-react"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 const LOGOS = [
   {
@@ -30,44 +31,51 @@ const LOGOS = [
 
 export function Home() {
   return (
-    <div>
+    <div className="bg-black">
       {/* Hero Section */}
-      <section className="relative w-[1280px] h-[720px] mx-auto flex items-center justify-center">
+      <section className="relative min-h-[calc(100vh-4rem)] w-full mx-auto flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={heroImage}
-            alt="Hero background" 
-            className="w-[1280px] h-[720px] object-contain"
-            width={1280}
-            height={720}
-          />
+          <AspectRatio ratio={16 / 9}>
+            <img 
+              src={heroImage}
+              alt="Hero background" 
+              className="w-full h-full object-cover transform -translate-y-24"
+              width={1920}
+              height={1080}
+              loading="eager"
+              priority="true"
+            />
+          </AspectRatio>
         </div>
         
         {/* Content */}
-        <div className="relative z-10">
-          <Card className="rounded-2xl backdrop-blur-sm inline-block p-8">
-            <h1 className="text-6xl font-bold tracking-tight mb-6">
-              Welcome to <span className="text-primary">AILENS</span>
-            </h1>
-            <p className="text-xl text-gray-200 max-w-2xl mx-auto mb-8">
-              Transforming businesses through innovative AI solutions and cutting-edge technology
-            </p>
-          </Card>
+        <div className="relative z-10 text-center w-full max-w-4xl mx-auto px-4">
+          <h1 className="text-6xl font-bold tracking-tight mb-6 text-white">
+            Welcome to <span className="text-primary">AILENS</span>
+          </h1>
+          <p className="text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+            Transforming businesses through innovative AI solutions and cutting-edge technology
+          </p>
         </div>
       </section>
 
       {/* Methodology Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl font-bold tracking-tight text-white">Our Unique Methodology</h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-200 text-lg max-w-2xl mx-auto">
               We believe in understanding the 'why' before implementing the 'how' and 'what'
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-black/50 border-primary/20">
+            <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+              hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+              hover:scale-105 hover:border-blue-400/40 shadow-lg 
+              before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+              before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+              hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
               <CardHeader className="border-b-0">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <span className="text-primary text-2xl font-bold">1</span>
@@ -79,7 +87,12 @@ export function Home() {
               </CardHeader>
             </Card>
 
-            <Card className="bg-black/50 border-primary/20">
+            <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+              hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+              hover:scale-105 hover:border-blue-400/40 shadow-lg 
+              before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+              before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+              hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
               <CardHeader>
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <span className="text-primary text-2xl font-bold">2</span>
@@ -91,7 +104,12 @@ export function Home() {
               </CardHeader>
             </Card>
 
-            <Card className="bg-black/50 border-primary/20">
+            <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+              hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+              hover:scale-105 hover:border-blue-400/40 shadow-lg 
+              before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+              before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+              hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
               <CardHeader>
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <span className="text-primary text-2xl font-bold">3</span>
@@ -107,73 +125,85 @@ export function Home() {
       </section>
 
       {/* Customer Logo Slider */}
-      <Card className="border-none bg-black py-16 shadow-none">
-        <div className="container mx-auto px-4 space-y-8">
-          <div className="text-center space-y-2">
-            <h2 className="text-3xl font-bold tracking-tight text-white">Trusted by Industry Leaders</h2>
-            <p className="text-slate-400">
-              Join thousands of companies already using our platform
-            </p>
-          </div>
-          
-          <div className="relative mx-auto overflow-hidden bg-[#0A0A0A]"
-               style={{ 
-                 width: 'calc(var(--logo-width) * var(--visible-logos) + var(--logo-gap) * (var(--visible-logos) - 1))',
-                 height: '2rem'
-               }}>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0A0A0A] z-10"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0A0A0A] z-10"></div>
+      <section className="py-20">
+        <Card className="border-none bg-black py-16 shadow-lg">
+          <div className="container mx-auto px-4 space-y-8">
+            <div className="text-center space-y-2">
+              <h2 className="text-3xl font-bold tracking-tight text-white">Trusted by Industry Leaders</h2>
+              <p className="text-slate-400">
+                Join thousands of companies already using our platform
+              </p>
+            </div>
             
-            <div className={cn(
-              "flex animate-scroll-contained h-full items-center",
-            //   "hover:[animation-play-state:paused]",
-              "[--logo-width:150px]",
-              "[--logo-height:100rem]",
-              "[--logo-gap:4rem]",
-              "[--visible-logos:20]",
-              "[--total-logos:10]"
-            )}>
-              {LOGOS.map((logo, i) => (
-                <div 
-                  key={i} 
-                  className="flex items-center justify-center shrink-0 h-full"
-                  style={{ width: 'var(--logo-width)' }}
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className={cn(
-                      "h-full w-auto object-contain brightness-150 transition-all duration-300",
-                      "hover:brightness-200 hover:scale-110"
-                    )}
-                  />
-                </div>
-              ))}
-              {LOGOS.map((logo, i) => (
-                <div 
-                  key={`duplicate-${i}`} 
-                  className="flex items-center justify-center shrink-0 h-full"
-                  style={{ width: 'var(--logo-width)' }}
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className={cn(
-                      "h-full w-auto object-contain brightness-150 transition-all duration-300",
-                      "hover:brightness-200 hover:scale-110"
-                    )}
-                  />
-                </div>
-              ))}
+            <div className="relative mx-auto overflow-hidden bg-black"
+                style={{ 
+                  width: 'calc(var(--logo-width) * var(--visible-logos) + var(--logo-gap) * (var(--visible-logos) - 1))',
+                  height: '2rem'
+                }}>
+              {/* Left gradient with enhanced glow */}
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black z-10 
+                before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/30 before:to-transparent before:blur-2xl"></div>
+              
+              {/* Right gradient with enhanced glow */}
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black z-10
+                before:absolute before:inset-0 before:bg-gradient-to-l before:from-white/30 before:to-transparent before:blur-2xl"></div>
+              
+              <div className={cn(
+                "flex animate-scroll-contained h-full items-center",
+                "hover:[animation-play-state:paused]",
+                "[--logo-width:150px]",
+                "[--logo-height:100rem]",
+                "[--logo-gap:4rem]",
+                "[--visible-logos:20]",
+                "[--total-logos:10]"
+              )}>
+                {LOGOS.map((logo, i) => (
+                  <div 
+                    key={i} 
+                    className="flex items-center justify-center shrink-0 h-full"
+                    style={{ width: 'var(--logo-width)' }}
+                  >
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className={cn(
+                        "h-full w-auto object-contain brightness-150 transition-all duration-300",
+                        "hover:brightness-200 hover:scale-110"
+                      )}
+                    />
+                  </div>
+                ))}
+                {LOGOS.map((logo, i) => (
+                  <div 
+                    key={`duplicate-${i}`} 
+                    className="flex items-center justify-center shrink-0 h-full"
+                    style={{ width: 'var(--logo-width)' }}
+                  >
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className={cn(
+                        "h-full w-auto object-contain brightness-150 transition-all duration-300",
+                        "hover:brightness-200 hover:scale-110"
+                      )}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </Card>
+        </Card>
+      </section>
 
       {/* Features Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="grid md:grid-cols-3 gap-8">
-          <Card className="hover:border-primary/50 transition-colors">
+          <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+            hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+            hover:scale-105 hover:border-blue-400/40 shadow-lg 
+            before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+            before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+            hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
             <CardHeader>
               <CardTitle>AI Solutions</CardTitle>
               <CardDescription>
@@ -182,7 +212,12 @@ export function Home() {
             </CardHeader>
           </Card>
 
-          <Card className="hover:border-primary/50 transition-colors">
+          <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+            hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+            hover:scale-105 hover:border-blue-400/40 shadow-lg 
+            before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+            before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+            hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
             <CardHeader>
               <CardTitle>Data Analytics</CardTitle>
               <CardDescription>
@@ -191,7 +226,12 @@ export function Home() {
             </CardHeader>
           </Card>
 
-          <Card className="hover:border-primary/50 transition-colors">
+          <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+            hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+            hover:scale-105 hover:border-blue-400/40 shadow-lg 
+            before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+            before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+            hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
             <CardHeader>
               <CardTitle>Machine Learning</CardTitle>
               <CardDescription>
@@ -201,6 +241,68 @@ export function Home() {
           </Card>
         </div>
       </div>
+
+      {/* Values Section */}
+      <section className="py-20">
+        <h2 className="text-3xl font-bold mb-6 text-white text-center">Our Values</h2>
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+            hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+            hover:scale-105 hover:border-blue-400/40 shadow-lg 
+            before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+            before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+            hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
+            <CardContent className="p-6">
+              <h4 className="text-xl font-bold mb-3 text-white">Innovation</h4>
+              <p className="text-slate-200">
+                We are committed to continuous learning and development, constantly pushing the boundaries of what AI can achieve.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+            hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+            hover:scale-105 hover:border-blue-400/40 shadow-lg 
+            before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+            before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+            hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
+            <CardContent className="p-6">
+              <h4 className="text-xl font-bold mb-3 text-white">Integrity</h4>
+              <p className="text-slate-200">
+                We operate with the highest ethical standards, fostering transparency and trust in all our interactions.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+            hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+            hover:scale-105 hover:border-blue-400/40 shadow-lg 
+            before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+            before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+            hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
+            <CardContent className="p-6">
+              <h4 className="text-xl font-bold mb-3 text-white">Collaboration</h4>
+              <p className="text-slate-200">
+                We believe in the power of teamwork, both within our company and with our clients, to deliver exceptional results.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-blue-500/20 transition-all duration-300 
+            hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-blue-500/30 
+            hover:scale-105 hover:border-blue-400/40 shadow-lg 
+            before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
+            before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
+            hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden">
+            <CardContent className="p-6">
+              <h4 className="text-xl font-bold mb-3 text-white">Excellence</h4>
+              <p className="text-slate-200">
+                We strive for excellence in all that we do, providing solutions that not only meet but exceed client expectations.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
     </div>
   )
 } 
