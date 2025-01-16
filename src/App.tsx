@@ -1,3 +1,4 @@
+import React from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { Navbar } from "@/components/Navbar"
 import { Home } from "@/pages/Home"
@@ -15,8 +16,10 @@ function App() {
     document.documentElement.classList.add('dark')
   }, [])
 
+  const baseUrl = process.env.NODE_ENV === 'production' ? 'ai-lens.github.io/website' : '/';
+
   return (
-    <Router>
+    <Router basename={baseUrl}>
       <div className="min-h-screen bg-background flex flex-col">
         <Navbar />
         <main className="pt-16 flex-grow">
