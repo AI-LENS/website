@@ -1,50 +1,42 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import {Card,CardContent,CardDescription,CardHeader,CardTitle} from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero.jpeg";
 import { cn } from "@/lib/utils";
-import { BadgeCheck, Brain, Code2, Cpu, Lock, Share2 } from "lucide-react";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import narayana from "@/assets/logos/narayana.png";
+import fluidly from "@/assets/logos/fluidly.webp";
+import specsgenie from "@/assets/logos/SpecsGenie.png";
+import dataanalytics from "@/assets/blogs/dataanalytics.jpeg";
+import machinelearning from "@/assets/blogs/machinelearning.jpeg";
+import futureai from "@/assets/blogs/futureai.jpeg";
 
 const LOGOS = [
   {
-    src: "src/assets/logos/narayana.png",
+    src:narayana,
   },
   {
-    src: "src/assets/logos/fluidly.webp",
-    alt: "Fluidly",
+    src:fluidly,
   },
   {
-    src: "src/assets/logos/SpecsGenie.png",
-    alt: "SpecsGenie",
+    src:specsgenie,
   },
   {
-    src: "src/assets/logos/narayana.png",
+    src:narayana,
   },
   {
-    src: "src/assets/logos/fluidly.webp",
-    alt: "Fluidly",
+    src:fluidly,
   },
   {
-    src: "src/assets/logos/SpecsGenie.png",
-    alt: "SpecsGenie",
+    src:specsgenie,
   },
   {
-    src: "src/assets/logos/narayana.png",
+    src:narayana,
   },
   {
-    src: "src/assets/logos/fluidly.webp",
-    alt: "Fluidly",
+    src:fluidly,
   },
   {
-    src: "src/assets/logos/SpecsGenie.png",
-    alt: "SpecsGenie",
+    src:specsgenie,
   },
 ];
 
@@ -252,15 +244,15 @@ export function Home() {
                 hover:scale-105 hover:border-blue-400/40 shadow-lg 
                 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br 
                 before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
-                hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden h-full"
+                hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden"
               >
-                <CardContent className="p-0 relative">
+                <CardContent className="p-0 relative h-[600px]">
                   <img 
                     src="src/assets/blogs/futureai.jpeg" 
                     alt="The Future of AI" 
-                    className="w-full h-[500px] object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/60 backdrop-blur-sm h-[25%]">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/60 backdrop-blur-sm h-[30%]">
                     <h3 className="text-2xl font-bold text-white mb-1">The Future of AI</h3>
                     <p className="text-slate-300 text-sm">Exploring the upcoming trends and innovations in artificial intelligence that will shape our tomorrow. Discover how AI is revolutionizing industries and creating new opportunities for growth and innovation.</p>
                   </div>
@@ -278,13 +270,13 @@ export function Home() {
                   before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
                   hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden"
                 >
-                  <CardContent className="p-0 relative">
+                  <CardContent className="p-0 relative h-[300px]">
                     <img 
                       src="src/assets/blogs/machinelearning.jpeg" 
                       alt="Machine Learning Basics" 
-                      className="w-full h-48 object-cover"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/60 backdrop-blur-sm h-[25%]">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/60 backdrop-blur-sm h-[30%]">
                       <h3 className="text-xl font-bold text-white mb-1">Machine Learning Basics</h3>
                       <p className="text-slate-300 text-sm">A comprehensive guide to understanding the fundamentals of machine learning algorithms.</p>
                     </div>
@@ -300,13 +292,13 @@ export function Home() {
                   before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all before:duration-300
                   hover:before:from-blue-500/10 hover:before:to-white/10 relative overflow-hidden"
                 >
-                  <CardContent className="p-0 relative">
+                  <CardContent className="p-0 relative h-[300px]">
                     <img 
                       src="src/assets/blogs/dataanalytics.jpeg" 
                       alt="Data Analytics Impact" 
-                      className="w-full h-48 object-cover"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/60 backdrop-blur-sm h-[25%]">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/60 backdrop-blur-sm h-[30%]">
                       <h3 className="text-xl font-bold text-white mb-1">Data Analytics Impact</h3>
                       <p className="text-slate-300 text-sm">How data analytics is revolutionizing business decision-making in the modern era.</p>
                     </div>
