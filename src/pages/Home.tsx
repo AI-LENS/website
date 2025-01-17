@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero.jpeg";
 import { cn } from "@/lib/utils";
 import { AspectRatio } from "@/components/ui/aspect-ratio"
-import narayana from "@/assets/logos/narayana.png";
+import narayana from "@/assets/logos/Narayana.png";
 import fluidly from "@/assets/logos/fluidly.webp";
 import specsgenie from "@/assets/logos/SpecsGenie.png";
 import dataanalytics from "@/assets/blogs/dataanalytics.jpeg";
