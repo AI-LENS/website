@@ -50,6 +50,7 @@ module.exports = {
       animation: {
         'scroll-contained': 'scroll-contained 20s linear infinite',
         'logo-enter': 'logo-enter 1.5s ease-out infinite',
+        'scroll-loop': 'scroll-loop 10s linear infinite'
       },
       keyframes: {
         'scroll-contained': {
@@ -70,6 +71,10 @@ module.exports = {
             opacity: '1'
           },
         },
+        'scroll-loop': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-33.33%)' }
+        }
       },
     },
   },

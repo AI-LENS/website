@@ -35,7 +35,7 @@ export function Footer() {
           </Card>
 
           {/* Our Offerings */}
-          <Card className="bg-transparent border-none shadow-none hover:bg-zinc-800/20 transition-colors duration-300">
+          <Card className="bg-transparent border-none shadow-none transition-colors duration-300">
             <CardContent className="p-0">
               <h3 className="text-lg font-semibold text-foreground mb-4">Our Offerings</h3>
               <ul className="text-muted-foreground text-sm space-y-2">
@@ -60,7 +60,7 @@ export function Footer() {
           </Card>
 
           {/* Contact Info */}
-          <Card className="bg-transparent border-none shadow-none hover:bg-zinc-800/20 transition-colors duration-300">
+          <Card className="bg-transparent border-none shadow-none transition-colors duration-300">
             <CardContent className="p-0">
               <h3 className="text-lg font-semibold text-foreground mb-4">Contact Info</h3>
               <div className="text-muted-foreground text-sm space-y-4">
