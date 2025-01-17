@@ -248,7 +248,7 @@ export function Home() {
               >
                 <CardContent className="p-0 relative h-[600px]">
                   <img 
-                    src="src/assets/blogs/futureai.jpeg" 
+                    src={futureai} 
                     alt="The Future of AI" 
                     className="absolute inset-0 w-full h-full object-cover"
                   />
@@ -272,7 +272,7 @@ export function Home() {
                 >
                   <CardContent className="p-0 relative h-[300px]">
                     <img 
-                      src="src/assets/blogs/machinelearning.jpeg" 
+                      src={machinelearning} 
                       alt="Machine Learning Basics" 
                       className="absolute inset-0 w-full h-full object-cover"
                     />
@@ -294,7 +294,7 @@ export function Home() {
                 >
                   <CardContent className="p-0 relative h-[300px]">
                     <img 
-                      src="src/assets/blogs/dataanalytics.jpeg" 
+                      src={dataanalytics} 
                       alt="Data Analytics Impact" 
                       className="absolute inset-0 w-full h-full object-cover"
                     />
