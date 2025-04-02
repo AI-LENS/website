@@ -1,6 +1,7 @@
+import React from "react"
 import { Link, useLocation } from "react-router-dom"
 import { cn } from "@/lib/utils"
-import logo1 from "@/assets/logo2.png"
+import logo1 from "@/assets/logomain.svg"
 
 export function Navbar() {
   const location = useLocation()
@@ -11,13 +12,13 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4">
-        <div className="flex h-14 items-center justify-between">
+      <div className="w-full mx-auto">
+        <div className="flex h-16 items-center justify-between px-8">
           <Link to="/" className="flex items-center">
             <img 
               src={logo1} 
               alt="AILENS Logo" 
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
           </Link>
 

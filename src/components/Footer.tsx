@@ -1,3 +1,4 @@
+import React from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { Input } from "@/components/ui/input"
@@ -12,9 +13,9 @@ export function Footer() {
       before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-b 
       before:from-blue-500/5 before:to-white/5 before:blur-xl before:transition-all
       font-[-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial,sans-serif]">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-0 sm:px-2 py-12 max-w-full">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 px-4 lg:px-8">
           {/* Logo and Description */}
           <Card className="bg-transparent border-none shadow-none">
             <CardContent className="p-0">
@@ -98,10 +99,8 @@ export function Footer() {
           </Card>
         </div>
 
-        {/* <Separator className="my-8 bg-blue-500/20" /> */}
-
         {/* Social Links */}
-        <div className="flex justify-center space-x-6 mb-8">
+        <div className="flex justify-center space-x-6 mb-8 px-4">
           <Button
             variant="ghost"
             size="icon"
@@ -132,10 +131,10 @@ export function Footer() {
           </Button>
         </div>
 
-        <Separator className="bg-blue-500/20" />
+        <Separator className="bg-blue-500/20 mx-4 lg:mx-8" />
 
         {/* Bottom Footer */}
-        <div className="pt-8">
+        <div className="pt-8 px-4 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-300 text-sm">
               © Copyright ©2024 AILENS. All Rights Reserved
